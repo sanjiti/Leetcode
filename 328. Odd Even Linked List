@@ -13,6 +13,7 @@ class Solution(object):
         end = head
         count =0
         
+    
         while end and end.next:
             end = end.next
             count = count+1
