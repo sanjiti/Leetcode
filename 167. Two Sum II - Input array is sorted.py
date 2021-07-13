@@ -1,11 +1,16 @@
-numb = [2,7,11,15]
-target = 9
-p1 = 0
-p2 = len(numb)-1
-while p1<p2:
-            if numb[p1]+numb[p2] > target:
+class Solution(object):
+    def twoSum(self, numbers, target):
+        """
+        :type numbers: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        p1 = 0
+        p2 = len(numbers)-1
+        while p1<p2:
+            if numbers[p1]+numbers[p2] > target:
                 p2-=1
-            elif numb[p1]+numb[p2]<target:
+            elif numbers[p1]+numbers[p2]<target:
                 p1+=1
-            break
-print([p1+1, p2+1]) 
+            else:
+                return [p1+1, p2+1]
